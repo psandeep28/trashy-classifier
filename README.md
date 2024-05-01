@@ -1,4 +1,5 @@
 # trashy-classifier
 
 > Author: Kaleb Ugalde
-> Author2: Parth Sandeep
+> Author 2: Parth Sandeep
+> Author 3: Kwae Htoo
