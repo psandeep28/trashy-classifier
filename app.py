@@ -54,11 +54,23 @@ def detect_objects(image):
 
 
 def infoTAB():
-    st.write("Learn More")
+    st.markdown(":blue-background[**ABOUT OUR PROJECT**]")
+    st.markdown("*Group Members: Kaleb Ugalde, Parth Sandeep, Vidhi Oswal, Shashwat Dudeja, Kwae Htoo*")
+    st.markdown("")
+    st.markdown(":blue-background[**THE PROCESS**]")
+    st.markdown("""
+                We decided to do a computer vision project and create multi-object detector that is able to identify trash (e.g plastic, bottles, etc).
+                After finalizing our idea, we researched online on datasets and already existing models that we could use.
+                The end result was using a trash dataset from Kaggle and using the YOLO model for multi-object detection.
+                To put everything together, we use PyTorch to implement our model and train our model on the dataset from Kaggle.
+                Finally, we made a simple website using Streamlit to deploy our model.
+                """)
+    st.markdown("")
+    
 
 
 def demoTAB():
-    st.title("Trashy classifier")
+    st.title("Trashy Classifier Model")
     option = st.radio("Choose Input Method:", ('Upload Image', 'Use Camera'))
     if option == 'Upload Image':
         uploaded_image = st.file_uploader(
@@ -89,10 +101,10 @@ def demoTAB():
 #  RUN STREAMLIT !!!!!!!!!
 def main():
     tab_select = st.sidebar.radio("Welcome! Where would you like to explore?", (
-        "Know More About Our Model!", "Try Out Our Model!"))
-    if tab_select == "Know More About Our Model!":
+        "About Our Project", "Try Out Our Model"))
+    if tab_select == "About Our Project":
         infoTAB()
-    elif tab_select == "Try Out Our Model!":
+    elif tab_select == "Try Out Our Model":
         demoTAB()
 
 
